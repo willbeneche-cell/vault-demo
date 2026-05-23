@@ -185,6 +185,13 @@ export default function VaultApp() {
   return (
     <div className="min-h-screen bg-zinc-950 text-white font-sans overflow-hidden flex flex-col">
       
+
+<head>
+        <title>Vault</title>
+        <link rel="apple-touch-icon" href="/logo.png" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+      </head>
+
       {/* --- MODAL CHOOSE USERNAME --- */}
       <AnimatePresence>
         {showNamePrompt && (
