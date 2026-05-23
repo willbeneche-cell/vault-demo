@@ -20,9 +20,46 @@ const NEWS_POOL = [
 ];
 
 const INITIAL_MARKETS = [
-  { id: "poly_1", question: "Le Bitcoin dépassera-t-il les 120 000 € avant la fin du mois ?", yesPrice: 0.64, noPrice: 0.36, volume: "1,2M €", category: "Crypto" },
-  { id: "poly_2", question: "La FED va-t-elle réduire ses taux directeurs de 50 points de base ?", yesPrice: 0.42, noPrice: 0.58, volume: "840K €", category: "Macro" },
-  { id: "poly_3", question: "Ethereum va-t-il enregistrer de meilleurs rendements mensuels que Solana ?", yesPrice: 0.28, noPrice: 0.72, volume: "410K €", category: "Tech" },
+  { 
+    id: "poly_1", 
+    question: "Le Crunch Creator dépassera-t-il les 800k viewers en pic ?", 
+    yesPrice: 0.55, 
+    noPrice: 0.45, 
+    volume: "1,2M €", 
+    category: "Twitch" 
+  },
+  { 
+    id: "poly_2", 
+    question: "La France va-t-elle remporter l'Eleven All Stars contre l'Angleterre ?", 
+    yesPrice: 0.38, 
+    noPrice: 0.62, 
+    volume: "950K €", 
+    category: "Event" 
+  },
+  { 
+    id: "poly_3", 
+    question: "GTA VI dévoilera-t-il une nouvelle bande-annonce avant la fin du trimestre ?", 
+    yesPrice: 0.72, 
+    noPrice: 0.28, 
+    volume: "2,1M €", 
+    category: "Gaming" 
+  },
+  { 
+    id: "poly_4", 
+    question: "Inoxtag sortira-t-il un nouveau concept d'aventure IRL avant l'été ?", 
+    yesPrice: 0.45, 
+    noPrice: 0.55, 
+    volume: "680K €", 
+    category: "YouTube" 
+  },
+  { 
+    id: "poly_5", 
+    question: "Le PSG remportera-t-il son prochain match de Ligue des Champions ?", 
+    yesPrice: 0.65, 
+    noPrice: 0.35, 
+    volume: "1,8M €", 
+    category: "Sport" 
+  }
 ];
 
 export default function VaultApp() {
