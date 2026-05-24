@@ -12,37 +12,42 @@ import {
 const NEWS_POOL = [
   { title: "Rumeurs d'un ETF Solana imminent validé par la SEC", type: "crypto" },
   { title: "L'inflation sous-jacente en zone euro baisse plus vite que prévu", type: "finance" },
+  { title: "Karmine Corp : Kameto annonce l'ouverture d'un nouveau centre de formation e-sport", type: "esport" },
   { title: "Un wallet endormi depuis 2011 contenant 500 BTC vient de se réactiver", type: "crypto" },
-  { title: "Apple annonce l'intégration native de nœuds de validation de consensus", type: "finance" },
-  { title: "Le hashrate mondial du Bitcoin atteint une puissance record", type: "crypto" },
-  { title: "Les liquidations de positions short s'élèvent à 120M$ en 1h", type: "crypto" },
-  { title: "La Banque Centrale annonce une pause sur la hausse des taux obligataires", type: "finance" }
+  { title: "Amine bat un nouveau record d'abonnements simultanés lors de son dernier live", type: "twitch" },
+  { title: "Apple annonce le rachat secret d'un studio majeur de jeux vidéo pour booster l'Apple Vision", type: "finance" },
+  { title: "Le hashrate mondial du Bitcoin atteint une puissance de calcul record", type: "crypto" },
+  { title: "Squeezie dévoile les coulisses de la préparation physique des pilotes du GP Explorer", type: "youtube" },
+  { title: "Les liquidations de positions short sur l'Ethereum s'élèvent à 120M$ en une heure", type: "crypto" },
+  { title: "Un club français de Counter-Strike 2 se qualifie pour les phases finales du Major", type: "esport" },
+  { title: "La Banque Centrale annonce une pause surprise sur la hausse des taux obligataires", type: "finance" },
+  { title: "Des rumeurs évoquent un leak massif de la première bande-annonce de GTA VI", type: "gaming" }
 ];
 
 const INITIAL_MARKETS = [
   { 
     id: "poly_1", 
-    question: "Le Crunch Creator dépassera-t-il les 800k viewers en pic ?", 
-    yesPrice: 0.55, 
-    noPrice: 0.45, 
-    volume: "1,2M €", 
-    category: "Twitch" 
+    question: "La série 'The Last of Us' Saison 2 battra-t-elle le record d'audience de la saison 1 ?", 
+    yesPrice: 0.61, 
+    noPrice: 0.39, 
+    volume: "1,7M €", 
+    category: "Séries" 
   },
   { 
     id: "poly_2", 
-    question: "La France va-t-elle remporter l'Eleven All Stars contre l'Angleterre ?", 
-    yesPrice: 0.38, 
-    noPrice: 0.62, 
-    volume: "950K €", 
-    category: "Event" 
+    question: "Un streamer français majeur va-t-il signer un contrat d'exclusivité sur Kick ce mois-ci ?", 
+    yesPrice: 0.34, 
+    noPrice: 0.66, 
+    volume: "820K €", 
+    category: "Streaming" 
   },
   { 
     id: "poly_3", 
-    question: "GTA VI dévoilera-t-il une nouvelle bande-annonce avant la fin du trimestre ?", 
-    yesPrice: 0.72, 
-    noPrice: 0.28, 
-    volume: "2,1M €", 
-    category: "Gaming" 
+    question: "Le film d'animation 'Spider-Man: Beyond the Spider-Verse' sortira-t-il cette année ?", 
+    yesPrice: 0.42, 
+    noPrice: 0.58, 
+    volume: "1,1M €", 
+    category: "Cinéma" 
   },
   { 
     id: "poly_4", 
@@ -59,6 +64,126 @@ const INITIAL_MARKETS = [
     noPrice: 0.35, 
     volume: "1,8M €", 
     category: "Sport" 
+  },
+  { 
+    id: "poly_6", 
+    question: "Apple présentera-t-il un tout nouveau produit doté d'une IA holographique à sa keynote ?", 
+    yesPrice: 0.27, 
+    noPrice: 0.73, 
+    volume: "2,5M €", 
+    category: "Tech" 
+  },
+  { 
+    id: "poly_7", 
+    question: "Charles Leclerc remportera-t-il le prochain Grand Prix de Formule 1 ?", 
+    yesPrice: 0.49, 
+    noPrice: 0.51, 
+    volume: "1,9M €", 
+    category: "F1" 
+  },
+  { 
+    id: "poly_8", 
+    question: "Le rappeur SDM annoncera-t-il un concert complet au Stade de France avant la fin de l'année ?", 
+    yesPrice: 0.71, 
+    noPrice: 0.29, 
+    volume: "940K €", 
+    category: "Musique" 
+  },
+  { 
+    id: "poly_9", 
+    question: "Un club français de Counter-Strike 2 se qualifiera-t-il pour les phases finales du Major ?", 
+    yesPrice: 0.52, 
+    noPrice: 0.48, 
+    volume: "710K €", 
+    category: "Esport" 
+  },
+  { 
+    id: "poly_10", 
+    question: "Masturman ou un membre de la Blue House lancera-t-il une marque de vêtements officielle ?", 
+    yesPrice: 0.64, 
+    noPrice: 0.36, 
+    volume: "530K €", 
+    category: "Web" 
+  },
+  { 
+    id: "poly_11", 
+    question: "La billetterie de l'événement 'Eleven All Stars 2' affichera-t-elle complet en moins de 5 minutes ?", 
+    yesPrice: 0.85, 
+    noPrice: 0.15, 
+    volume: "3,4M €", 
+    category: "Event" 
+  },
+  { 
+    id: "poly_12", 
+    question: "Une mise à jour majeure de la carte de Fortnite ramènera-t-elle l'intégralité du Chapitre 2 ?", 
+    yesPrice: 0.38, 
+    noPrice: 0.62, 
+    volume: "1,2M €", 
+    category: "Gaming" 
+  },
+  { 
+    id: "poly_13", 
+    question: "Grimkujow lancera-t-il un concept d'émission TV diffusé en simultané sur Twitch ?", 
+    yesPrice: 0.55, 
+    noPrice: 0.45, 
+    volume: "460K €", 
+    category: "Twitch" 
+  },
+  { 
+    id: "poly_14", 
+    question: "Un nouveau modèle d'intelligence artificielle open-source dépassera-t-il GPT-4o ce trimestre ?", 
+    yesPrice: 0.73, 
+    noPrice: 0.27, 
+    volume: "2,1M €", 
+    category: "Tech" 
+  },
+  { 
+    id: "poly_15", 
+    question: "Le combattant Bakary Samaké décrochera-t-il une ceinture mondiale de boxe d'ici décembre ?", 
+    yesPrice: 0.68, 
+    noPrice: 0.32, 
+    volume: "880K €", 
+    category: "Boxe" 
+  },
+  { 
+    id: "poly_16", 
+    question: "Léna Situations animera-t-elle un podcast exclusif en direct depuis un grand festival mondial ?", 
+    yesPrice: 0.59, 
+    noPrice: 0.41, 
+    volume: "620K €", 
+    category: "People" 
+  },
+  { 
+    id: "poly_17", 
+    question: "L'équipe de France de Rugby à XV remportera-t-elle le Tournoi des Six Nations ?", 
+    yesPrice: 0.76, 
+    noPrice: 0.24, 
+    volume: "2,2M €", 
+    category: "Sport" 
+  },
+  { 
+    id: "poly_18", 
+    question: "Le retour de l'émission Popstars sur Prime Video signera-t-il une saison 2 ?", 
+    yesPrice: 0.43, 
+    noPrice: 0.57, 
+    volume: "390K €", 
+    category: "Pop Culture" 
+  },
+  { 
+    id: "poly_19", 
+    question: "Le jeu Assassin's Creed Shadows dépassera-t-il les 10 millions de ventes au lancement ?", 
+    yesPrice: 0.51, 
+    noPrice: 0.49, 
+    volume: "1,6M €", 
+    category: "Gaming" 
+  },
+  { 
+    id: "poly_20", 
+    question: "Le créateur Henry Tran fera-t-il une annonce de retour majeur sur sa chaîne principale ?", 
+    yesPrice: 0.33, 
+    noPrice: 0.67, 
+    volume: "510K €", 
+    category: "YouTube" 
   }
 ];
 
